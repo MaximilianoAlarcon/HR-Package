@@ -17,6 +17,6 @@ class Model(BaseEstimator, RegressorMixin):
         model.add(Dense(32,kernel_initializer='normal',input_dim = 70,activation="relu"))
         model.add(Dense(1,activation = "linear")) 
         model.compile(optimizer = "adam",loss="mse",metrics=['mse'])
-        model.load_weights('model_savedfile_format/model_nn_reg')
+        model.load_weights(self.ruta_modelo)
         data = model.predict(data)
         return data
