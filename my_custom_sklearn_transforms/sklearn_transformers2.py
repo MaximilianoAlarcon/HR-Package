@@ -17,3 +17,5 @@ class Poly_data(BaseEstimator, TransformerMixin):
         model = tf.keras.models.load_model(self.ruta_modelo)
         data = model.predict(data)
         return data
+	def predict(self, X):
+		return X
